@@ -24,10 +24,12 @@ export class HomeComponent implements OnInit, OnChanges {
   image: any;
 
   ngOnInit() {
+    this.foods = []
     this.getFoodData();
   }
 
   getFoodData() {
+    this.foods = []
     this.foodService.getAll().subscribe(
       (res: any) => {
         this.foods = res;
@@ -43,6 +45,7 @@ export class HomeComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
+    
     if (
       this.foodService.getSearchFood(
         changes['searchData'].currentValue['search']
@@ -55,12 +58,8 @@ export class HomeComponent implements OnInit, OnChanges {
           console.log(res);
           this.foods = [];
           this.foods = res;
-          console.log(res);
+          console.log(this.foods);
         });
-
-      setTimeout((res: any) => {
-        localStorage.removeItem('search');
-      }, 1000);
     }
   }
 }
