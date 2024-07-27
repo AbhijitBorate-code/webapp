@@ -1,0 +1,39 @@
+header{
+    padding: 0;
+    height: 70px;
+    
+    background-color: #fff;
+    border-bottom: 1px solid black;
+    background-color: rgb(42, 42, 218);
+}
+
+
+a{
+    color: red;
+}
+
+a:hover{
+    background-color: red;
+    color:  white;
+}
+
+
+.nav-bar {
+    width: 30%;
+    margin:auto;
+    justify-content: center;
+    align-items: start;
+    
+}
+
+.container{
+    /* margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly; */
+}
+
+a.logo{
+    font-weight: bold;
+    padding: 1em;
+}
+

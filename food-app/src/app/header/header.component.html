@@ -1,0 +1,21 @@
+<header>
+    <div class="container" row>
+        <div class="nav-bar col-md-6">
+            <form #searchbar="ngForm" (ngSubmit)="onSubmit(searchbar.value)">
+                <div class="navbar">
+                    <input class="form-control mr-sm-2 col-m-2" type="search"  name="search"(input)="onSearchChange($event)" placeholder="Search here to find best food" ngModel aria-label="Search">
+                </div>
+            </form>
+
+        </div>
+        <div clas="col-md-6">
+            <ul>
+                <li>
+                    <a (click)="getNavigateTo()">cart</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<app-home  [searchData]="searchData"></app-home>
+

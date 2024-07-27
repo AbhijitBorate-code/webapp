@@ -1,0 +1,15 @@
+
+<div class="container">
+  <div class="row">
+      <ng-container *ngFor="let item of foods.recipes">
+          <div class="card col-md-3">
+              <img src="{{item.image}}" alt="">
+              <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">cuisine : {{item.cuisine}}</h5>
+              <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">Name : {{item.name}}$</p>
+              <app-star-app [rating]="item.rating"></app-star-app>
+              <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">Price : {{item.userId}}$</p>
+              <button class="btn btn-primary w-100" (click)="addTOcart(item.id)">Add to cart</button>
+          </div>
+      </ng-container>
+  </div>
+</div>

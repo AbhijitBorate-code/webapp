@@ -1,0 +1,22 @@
+.star-rating {
+    display: flex;
+  }
+  
+  .star {
+    font-size: 1rem;
+    color: red; /* Gold color for filled stars */
+    margin-right: 0.1rem;
+  }
+  
+  .star.empty {
+    color: #e0e0e0; /* Gray color for empty stars */
+  }
+  
+  .star.filled::before {
+    content: '\2605'; /* Unicode for filled star */
+  }
+  
+  .star.empty::before {
+    content: '\2606'; /* Unicode for empty star */
+  }
+  
